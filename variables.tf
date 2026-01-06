@@ -1,5 +1,7 @@
 variable "filename" {
     default = "C:/Terraform/pets.txt"
+    type = string
+    description = "the path of the local file"
 }
 
 variable "content" {
