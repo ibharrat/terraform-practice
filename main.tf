@@ -1,11 +1,10 @@
 resource "local_file" "pet" {
-    filename = "C:/Terraform/pets.txt"
-    content = "We love pets!"
-    file_permission = "0700"
+    filename = var.filename
+    content = var.content
 }
 
 resource "random_pet" "my-pet" {
-    prefix = "Mrs"
-    separator = "."
-    length = 1
+    prefix = var.prefix 
+    separator = var.separator
+    length = var.length
 }
